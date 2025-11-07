@@ -53,9 +53,10 @@ bool check_accuracy(double *A, double *Anot, int nvalues)
 /* The benchmarking program */
 int main(int argc, char** argv) 
 {
+
     std::cout << "Description:\t" << dgemv_desc << std::endl << std::endl;
 
-    std::cout << std::fixed << std::setprecision(5);
+    std::cout << std::fixed << std::setprecision(10);
 
     // we purposefully run the smallest problem twice so as to "condition"
     // BLAS. For timing purposes, ignore the timing of the first problem size
@@ -93,12 +94,18 @@ int main(int argc, char** argv)
         memcpy((void *)Ycopy, (const void *)Y, sizeof(double)*n);
 
         // insert start timer code here
+        std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
+
 
         // call the method to do the work
         my_dgemv(n, A, X, Y); 
 
         // insert end timer code here, and print out the elapsed time for this problem size
-
+        // get the end time of the call to sum
+        std::chrono::time_point<std::chrono::high_resolution_clock> end_time = std::chrono::high_resolution_clock::now();
+        // get and print elapsed time
+        std::chrono::duration<double> elapsed_time = end_time - start_time;
+        std::cout << " Elapsed time is : " << elapsed_time.count() << " seconds" << std::endl;
 
         // now invoke the cblas method to compute the matrix-vector multiplye
         reference_dgemv(n, Acopy, Xcopy, Ycopy);
@@ -106,6 +113,12 @@ int main(int argc, char** argv)
         // compare your result with that computed by BLAS
         if (check_accuracy(Ycopy, Y, n) == false)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
+
+
+
+
+        // NOTE: according to lecture slides 22, the # of arithmetic operations is 2n^2 
+        // and the number of memory operations is 2n + 2n^2?
     
     } // end loop over problem sizes
 
