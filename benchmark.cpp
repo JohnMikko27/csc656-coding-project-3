@@ -121,6 +121,9 @@ int main(int argc, char** argv)
         // and the number of memory operations is 2n + 2n^2?
 
         // peak theoretical bandwidth seems to still be 204.8GB/s
+
+        // start doing recording the run times and put in a .txt file 
+        // (make sure to use the perlmutter nodes)
     
     } // end loop over problem sizes
 
