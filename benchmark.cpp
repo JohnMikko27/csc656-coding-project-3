@@ -119,6 +119,8 @@ int main(int argc, char** argv)
 
         // NOTE: according to lecture slides 22, the # of arithmetic operations is 2n^2 
         // and the number of memory operations is 2n + 2n^2?
+
+        // peak theoretical bandwidth seems to still be 204.8GB/s
     
     } // end loop over problem sizes
 
