@@ -1,0 +1,45 @@
+NOTE: calculate this again prob using a function later
+
+MFLOP/s =  ops/time, where
+ops = number of operations/1M
+time = runtime(sec)
+
+% of memory bandwidth utilized = (bytes/time) / (capacity), where
+bytes = number of memory bytes accessed by your program
+time = runtime of your program (secs)
+capacity = theoretical peak memory bandwidth of the system
+
+
+N=1024 
+0.0008846440 seconds
+MFLOP/s = (2 (1024 * 1024) + 1024) / 1000000 / 0.0008846440 = 2371.77440869
+
+% of memory bandwidth utilized = 8(2 (1024 * 1024) + 2 (1024)) / 0.0008846440 / 204.8 / 1000000000 * 100 = 9.26926537681
+
+
+N=2048 
+0.0035915490 seconds
+MFLOP/s = (2 (2048 * 2048) + 2048) / 1000000 / 0.0035915490 = 2336.22205906
+
+% of memory bandwidth utilized = 8(2 (2048 * 2048) + 2 (2048)) / 0.0035915490 / 204.8 / 1000000000 * 100 = 9.12809486937
+
+
+N=4096 
+0.0146298760 seconds
+MFLOP/s = (2 (4096 * 4096) + 4096) / 1000000 / 0.0146298760 = 2293.83543647
+
+% of memory bandwidth utilized = 8(2 (4096 * 4096) + 2 (4096)) / 0.0146298760 / 204.8 / 1000000000 * 100 = 8.96138832619
+
+
+N=8192 
+0.0583525940 seconds
+MFLOP/s = (2 (8192 * 8192) + 8192) / 1000000 / 0.0583525940 = 2300.25626624
+
+% of memory bandwidth utilized = 8(2 (8192 * 8192) + 2 (8192)) / 0.0583525940 / 204.8 / 1000000000 * 100 = 8.98592443037
+
+
+N=16384 
+0.2338662700 seconds
+MFLOP/s = (2 (16384 * 16384) + 16384) / 1000000 / 0.2338662700 = 2295.70213781
+
+% of memory bandwidth utilized = 8(2 (16384 * 16384) + 2 (16384)) / 0.2338662700 / 204.8 / 1000000000 * 100 = 8.96786013648

@@ -1,0 +1,53 @@
+my_dgemv(int, double*, double*, double*):
+        mov     eax, edi
+        mov     rdi, rdx
+        test    eax, eax
+        jle     .L7
+        movsx   r9, eax
+        dec     eax
+        mov     r8, rcx
+        mov     rdx, rsi
+        sal     r9, 3
+        shr     eax, 3
+        lea     rsi, [rcx+r9]
+        lea     ecx, [rax+1]
+.L3:
+        xor     eax, eax
+        xor     r10d, r10d
+        vxorpd  xmm1, xmm1, xmm1
+.L4:
+        vmovupd ymm5, YMMWORD PTR [rdi+rax]
+        vmovupd ymm6, YMMWORD PTR [rdi+32+rax]
+        inc     r10d
+        vmulpd  ymm0, ymm5, YMMWORD PTR [rdx+rax]
+        vmulpd  ymm2, ymm6, YMMWORD PTR [rdx+32+rax]
+        add     rax, 64
+        vaddsd  xmm1, xmm1, xmm0
+        vunpckhpd       xmm3, xmm0, xmm0
+        vextractf128    xmm0, ymm0, 0x1
+        vaddsd  xmm3, xmm3, xmm1
+        vaddsd  xmm1, xmm0, xmm3
+        vunpckhpd       xmm0, xmm0, xmm0
+        vaddsd  xmm0, xmm0, xmm1
+        vunpckhpd       xmm1, xmm2, xmm2
+        vaddsd  xmm3, xmm2, xmm0
+        vextractf128    xmm0, ymm2, 0x1
+        vaddsd  xmm3, xmm1, xmm3
+        vaddsd  xmm1, xmm0, xmm3
+        vunpckhpd       xmm0, xmm0, xmm0
+        vaddsd  xmm1, xmm1, xmm0
+        cmp     r10d, ecx
+        jb      .L4
+        vaddsd  xmm1, xmm1, QWORD PTR [r8]
+        add     r8, 8
+        add     rdx, r9
+        vmovsd  QWORD PTR [r8-8], xmm1
+        cmp     r8, rsi
+        jne     .L3
+        vzeroupper
+.L7:
+        ret
+.LC1:
+        .string "Vectorized implementation of matrix-vector multiply."
+dgemv_desc:
+        .quad   .LC1
