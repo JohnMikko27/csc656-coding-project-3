@@ -59,8 +59,8 @@ double get_mflops(double runtime, int n) {
 // subroutine to compute memory bandwidth for each problem size 
 double get_memory_bandwidth_utilized(double runtime, int n) {
   // size of type double is 8 bytes
-  double bytes = 8 * (2*(n * n) + (2 * n));
-  double bandwidth_utilized = bytes / 204.8 / 1000000000 / runtime * 100; 
+  double bytes = 8 * ((2.0 * n * n) + (2 * n));
+  double bandwidth_utilized = (bytes / runtime) / (204.8 * 1000000000) * 100; 
   return bandwidth_utilized;
 }
 
@@ -141,8 +141,8 @@ int main(int argc, char** argv)
         // start doing recording the run times and put in a .txt file 
         // (make sure to use the perlmutter nodes)
 
-        // printf(" MFLOPS: %f \n", get_mflops(elapsed_seconds, n));
-        // printf(" Memory Bandwidth Utilized: %f %%\n", get_memory_bandwidth_utilized(elapsed_seconds, n));
+        printf(" MFLOPS: %f \n", get_mflops(elapsed_seconds, n));
+        printf(" Memory Bandwidth Utilized: %f %%\n", get_memory_bandwidth_utilized(elapsed_seconds, n));
     
     } // end loop over problem sizes
 

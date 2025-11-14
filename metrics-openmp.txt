@@ -1,0 +1,91 @@
+OMP_NUM_THREASDS =  1
+Description:    OpenMP dgemv.
+N=1024 
+ Elapsed time is : 0.0012217580 seconds
+ MFLOPS: 1717.341732 
+ Memory Bandwidth Utilized: 6.711640 %
+N=2048 
+ Elapsed time is : 0.0042752860 seconds
+ MFLOPS: 1962.595251 
+ Memory Bandwidth Utilized: 7.668259 %
+N=4096 
+ Elapsed time is : 0.0158880260 seconds
+ MFLOPS: 2112.189897 
+ Memory Bandwidth Utilized: 8.251749 %
+N=8192 
+ Elapsed time is : 0.0609140670 seconds
+ MFLOPS: 2203.529113 
+ Memory Bandwidth Utilized: 8.608061 %
+N=16384 
+ Elapsed time is : 0.2393996950 seconds
+ MFLOPS: 2242.639850 
+ Memory Bandwidth Utilized: 8.760579 %
+
+OMP_NUM_THREASDS =  4
+Description:    OpenMP dgemv.
+N=1024 
+ Elapsed time is : 0.0039784020 seconds
+ MFLOPS: 527.391651 
+ Memory Bandwidth Utilized: 2.061129 %
+N=2048 
+ Elapsed time is : 0.0079650990 seconds
+ MFLOPS: 1053.427710 
+ Memory Bandwidth Utilized: 4.115956 %
+N=4096 
+ Elapsed time is : 0.0180451050 seconds
+ MFLOPS: 1859.702562 
+ Memory Bandwidth Utilized: 7.265350 %
+N=8192 
+ Elapsed time is : 0.0440241590 seconds
+ MFLOPS: 3048.915029 
+ Memory Bandwidth Utilized: 11.910551 %
+N=16384 
+ Elapsed time is : 0.1193379860 seconds
+ MFLOPS: 4498.880147 
+ Memory Bandwidth Utilized: 17.574287 %
+
+OMP_NUM_THREASDS =  16
+Description:    OpenMP dgemv.
+N=1024 
+ Elapsed time is : 0.0094650160 seconds
+ MFLOPS: 221.676963 
+ Memory Bandwidth Utilized: 0.866348 %
+N=2048 
+ Elapsed time is : 0.0176735750 seconds
+ MFLOPS: 474.757144 
+ Memory Bandwidth Utilized: 1.854973 %
+N=4096 
+ Elapsed time is : 0.0470714360 seconds
+ MFLOPS: 712.927645 
+ Memory Bandwidth Utilized: 2.785214 %
+N=8192 
+ Elapsed time is : 0.0828385320 seconds
+ MFLOPS: 1620.331949 
+ Memory Bandwidth Utilized: 6.329808 %
+N=16384 
+ Elapsed time is : 0.1740905290 seconds
+ MFLOPS: 3083.954648 
+ Memory Bandwidth Utilized: 12.047065 %
+
+OMP_NUM_THREASDS =  64
+Description:    OpenMP dgemv.
+N=1024 
+ Elapsed time is : 0.0206434530 seconds
+ MFLOPS: 101.638810 
+ Memory Bandwidth Utilized: 0.397220 %
+N=2048 
+ Elapsed time is : 0.0404923940 seconds
+ MFLOPS: 207.215607 
+ Memory Bandwidth Utilized: 0.809634 %
+N=4096 
+ Elapsed time is : 0.0769786630 seconds
+ MFLOPS: 435.945841 
+ Memory Bandwidth Utilized: 1.703121 %
+N=8192 
+ Elapsed time is : 0.1575678940 seconds
+ MFLOPS: 851.860849 
+ Memory Bandwidth Utilized: 3.327785 %
+N=16384 
+ Elapsed time is : 0.3068346400 seconds
+ MFLOPS: 1749.761031 
+ Memory Bandwidth Utilized: 6.835213 %

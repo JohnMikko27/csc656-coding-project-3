@@ -33,6 +33,10 @@ void my_dgemv(int n, double* A, double* x, double* y) {
          // row * n skips the necessary elements and gets the necessary "row" in the 1D array
          // while adding col gets the correct "column" in that "row"
          sum += A[row * n + col] * x[col];
+         // int nthreads = omp_get_num_threads();
+         // int thread_id = omp_get_thread_num();
+         // printf("my_dgemv(): Hello world: thread %d of %d checking in. \n", thread_id, nthreads);
+
       }
       y[row] += sum;
    }
