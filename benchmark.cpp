@@ -49,6 +49,21 @@ bool check_accuracy(double *A, double *Anot, int nvalues)
   return true;
 }
 
+// subroutine to compute MFLOPS for each problem size
+double get_mflops(double runtime, int n) {
+  double flops = (2.0 * n * n) + n;
+  double mflops = flops / 1000000 / runtime;
+  return mflops;
+}
+
+// subroutine to compute memory bandwidth for each problem size 
+double get_memory_bandwidth_utilized(double runtime, int n) {
+  // size of type double is 8 bytes
+  double bytes = 8 * (2*(n * n) + (2 * n));
+  double bandwidth_utilized = bytes / 204.8 / 1000000000 / runtime * 100; 
+  return bandwidth_utilized;
+}
+
 
 /* The benchmarking program */
 int main(int argc, char** argv) 
@@ -105,7 +120,8 @@ int main(int argc, char** argv)
         std::chrono::time_point<std::chrono::high_resolution_clock> end_time = std::chrono::high_resolution_clock::now();
         // get and print elapsed time
         std::chrono::duration<double> elapsed_time = end_time - start_time;
-        std::cout << " Elapsed time is : " << elapsed_time.count() << " seconds" << std::endl;
+        double elapsed_seconds = elapsed_time.count();
+        std::cout << " Elapsed time is : " << elapsed_seconds << " seconds" << std::endl;
 
         // now invoke the cblas method to compute the matrix-vector multiplye
         reference_dgemv(n, Acopy, Xcopy, Ycopy);
@@ -117,13 +133,16 @@ int main(int argc, char** argv)
 
 
 
-        // NOTE: according to lecture slides 22, the # of arithmetic operations is 2n^2 
+        // NOTE: according to lecture slides 22, the # of arithmetic operations is 2n^2 + n
         // and the number of memory operations is 2n + 2n^2?
 
         // peak theoretical bandwidth seems to still be 204.8GB/s
 
         // start doing recording the run times and put in a .txt file 
         // (make sure to use the perlmutter nodes)
+
+        // printf(" MFLOPS: %f \n", get_mflops(elapsed_seconds, n));
+        // printf(" Memory Bandwidth Utilized: %f %%\n", get_memory_bandwidth_utilized(elapsed_seconds, n));
     
     } // end loop over problem sizes
 
