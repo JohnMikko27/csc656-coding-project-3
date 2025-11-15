@@ -1,20 +1,20 @@
 N=1024 
- Elapsed time is : 0.0001596500 seconds
- MFLOPS: 13142.348888 
- Memory Bandwidth Utilized: 51.362355 %
+ Elapsed time is : 0.0002005080 seconds
+ MFLOPS: 10464.300676 
+ Memory Bandwidth Utilized: 40.896124 %
 N=2048 
- Elapsed time is : 0.0008425330 seconds
- MFLOPS: 9958.845529 
- Memory Bandwidth Utilized: 38.911236 %
+ Elapsed time is : 0.0009324430 seconds
+ MFLOPS: 8998.572567 
+ Memory Bandwidth Utilized: 35.159254 %
 N=4096 
- Elapsed time is : 0.0040878530 seconds
- MFLOPS: 8209.328467 
- Memory Bandwidth Utilized: 32.071603 %
+ Elapsed time is : 0.0042056720 seconds
+ MFLOPS: 7979.349792 
+ Memory Bandwidth Utilized: 31.173140 %
 N=8192 
- Elapsed time is : 0.0167970360 seconds
- MFLOPS: 7991.047944 
- Memory Bandwidth Utilized: 31.216936 %
+ Elapsed time is : 0.0169002710 seconds
+ MFLOPS: 7942.234772 
+ Memory Bandwidth Utilized: 31.026248 %
 N=16384 
- Elapsed time is : 0.0684200150 seconds
- MFLOPS: 7846.933328 
- Memory Bandwidth Utilized: 30.653019 %
+ Elapsed time is : 0.0685708950 seconds
+ MFLOPS: 7829.667325 
+ Memory Bandwidth Utilized: 30.585571 %

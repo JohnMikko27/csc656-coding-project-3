@@ -1,25 +1,13 @@
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:12:1: note: ***** Analysis failed with vector mode VOID
 /global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:11:26: missed: couldn't vectorize loop
 /global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:16:32: missed: not vectorized: complicated access pattern.
 /global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:29: optimized: loop vectorized using 32 byte vectors
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:29: optimized: loop vectorized using 16 byte vectors
 /global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:9:6: note: vectorized 1 loops in function.
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Analysis failed with vector mode V4DF
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** The result for vector mode V32QI would be the same
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Re-trying analysis with vector mode V16QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Analysis failed with vector mode V16QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Re-trying analysis with vector mode V8QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Analysis failed with vector mode V8QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Re-trying analysis with vector mode V4QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:25:14: note: ***** Analysis failed with vector mode V4QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:11:26: missed: couldn't vectorize loop
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:32: missed: not vectorized: complicated access pattern.
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:14:29: optimized: loop vectorized using 32 byte vectors
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:9:6: note: vectorized 1 loops in function.
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Analysis failed with vector mode V4DF
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** The result for vector mode V32QI would be the same
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Re-trying analysis with vector mode V16QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Analysis failed with vector mode V16QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Re-trying analysis with vector mode V8QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Analysis failed with vector mode V8QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Re-trying analysis with vector mode V4QI
-/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:26:14: note: ***** Analysis failed with vector mode V4QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Analysis failed with vector mode V4DF
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** The result for vector mode V32QI would be the same
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Re-trying analysis with vector mode V16QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Analysis failed with vector mode V16QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Re-trying analysis with vector mode V8QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Analysis failed with vector mode V8QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Re-trying analysis with vector mode V4QI
+/global/homes/j/johnmiks/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:19:14: note: ***** Analysis failed with vector mode V4QI
