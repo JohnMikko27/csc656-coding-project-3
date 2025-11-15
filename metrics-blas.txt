@@ -1,0 +1,20 @@
+N=1024 
+ Elapsed time is : 0.0001609020 seconds
+ MFLOPS: 13040.086512 
+ Memory Bandwidth Utilized: 50.962698 %
+N=2048 
+ Elapsed time is : 0.0005621000 seconds
+ MFLOPS: 14927.336773 
+ Memory Bandwidth Utilized: 58.324142 %
+N=4096 
+ Elapsed time is : 0.0041806530 seconds
+ MFLOPS: 8027.101986 
+ Memory Bandwidth Utilized: 31.359694 %
+N=8192 
+ Elapsed time is : 0.0186043490 seconds
+ MFLOPS: 7214.760377 
+ Memory Bandwidth Utilized: 28.184378 %
+N=16384 
+ Elapsed time is : 0.0772373530 seconds
+ MFLOPS: 6951.135366 
+ Memory Bandwidth Utilized: 27.153701 %
