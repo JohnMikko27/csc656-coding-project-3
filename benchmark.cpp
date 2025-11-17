@@ -130,17 +130,9 @@ int main(int argc, char** argv)
         if (check_accuracy(Ycopy, Y, n) == false)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
 
-
-
-
-        // NOTE: according to lecture slides 22, the # of arithmetic operations is 2n^2 + n
-        // and the number of memory operations is 2n + 2n^2?
-
-        // peak theoretical bandwidth seems to still be 204.8GB/s
-
-        // start doing recording the run times and put in a .txt file 
-        // (make sure to use the perlmutter nodes)
-
+        // Note: the runtimes, MFLOPs, and memory bandwidth numbers I used in the 
+        // analysis tables are in the metrics-*.txt files. The logfile-*.txt files are just a different
+        // run of the program, so the runtimes and metrics slightly differ.
         printf(" MFLOPS: %f \n", get_mflops(elapsed_seconds, n));
         printf(" Memory Bandwidth Utilized: %f %%\n", get_memory_bandwidth_utilized(elapsed_seconds, n));
     
